@@ -12,5 +12,7 @@ form.addEventListener('submit', function(e){
     .then(data => {
         console.log(data);
         window.location.href = `https://github.com/${data.login}`;
+    }).catch(() => {
+        alert("Wrong Username entered");
     });
 })
